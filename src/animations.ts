@@ -159,9 +159,9 @@ export const animationsData: AnimationData[] = [
       const atom__circle_1 = svgRoot.querySelector('.atom__circle_1');
       const atom__circle_2 = svgRoot.querySelector('.atom__circle_2');
       if (!atom__center || !atom__circle_1 || !atom__circle_2) return;
-      animate(atom__center, { opacity: [1, 0, 1, 0, 1] }, { duration: 1.5, ease: 'easeInOut' });
-      animate(atom__circle_1, { rotate: [0, 180] }, { duration: 1.5, ease: 'easeInOut' });
-      animate(atom__circle_2, { rotate: [0, -180] }, { duration: 1.5, ease: 'easeInOut' });
+      animate(atom__center, { opacity: [1, 0, 1, 0, 1] }, { duration: 1, ease: 'easeInOut' });
+      animate(atom__circle_1, { rotate: [0, 180] }, { duration: 1, ease: 'easeInOut' });
+      animate(atom__circle_2, { rotate: [0, -180] }, { duration: 1, ease: 'easeInOut' });
     },
     runAnimation() {
       this.animationScript();
@@ -202,8 +202,8 @@ export const animationsData: AnimationData[] = [
       const minusPath = svgRoot.querySelector('.minus__container');
       const minusLine = svgRoot.querySelector('.minus__line');
       if (!minusPath || !minusLine) return;
-      animate(minusPath, { rotate: [0, -180] }, { duration: 1.5, ease: 'easeInOut' });
-      animate(minusLine, { rotate: [0, 180] }, { duration: 1.5, ease: 'easeInOut' });
+      animate(minusPath, { rotate: [0, -180] }, { duration: 1, ease: 'easeInOut' });
+      animate(minusLine, { rotate: [0, 180] }, { duration: 1, ease: 'easeInOut' });
     },
     runAnimation() {
       this.animationScript();
@@ -226,9 +226,9 @@ export const animationsData: AnimationData[] = [
       const plusLine1 = svgRoot.querySelector('.plus__line__1');
       const plusLine2 = svgRoot.querySelector('.plus__line__2');
       if (!plusContainer || !plusLine1 || !plusLine2) return;
-      animate(plusContainer, { rotate: [0, -180] }, { duration: 1.5, ease: 'easeInOut' });
-      animate(plusLine1, { rotate: [0, 180] }, { duration: 1.5, ease: 'easeInOut' });
-      animate(plusLine2, { rotate: [0, 180] }, { duration: 1.5, ease: 'easeInOut' });
+      animate(plusContainer, { rotate: [0, -180] }, { duration: 1, ease: 'easeInOut' });
+      animate(plusLine1, { rotate: [0, 180] }, { duration: 1, ease: 'easeInOut' });
+      animate(plusLine2, { rotate: [0, 180] }, { duration: 1, ease: 'easeInOut' });
     },
     runAnimation() {
       this.animationScript();
@@ -248,7 +248,7 @@ export const animationsData: AnimationData[] = [
     animationScript: () => {
       const svgRoot = document.querySelector('#brush');
       if (!svgRoot) return;
-      animate(svgRoot, { rotate: [0, -15, 15, -15, 15, 0] }, { duration: 1.5, ease: 'easeInOut' });
+      animate(svgRoot, { rotate: [0, -15, 15, -15, 15, 0] }, { duration: 1, ease: 'easeInOut' });
     },
     runAnimation() {
       this.animationScript();
@@ -265,7 +265,7 @@ export const animationsData: AnimationData[] = [
       if (!svgRoot) return;
       const chartSplineLine = svgRoot.querySelector('.chart-line__line');
       if (!chartSplineLine) return;
-      animate(chartSplineLine, { pathLength: [0, 1] }, { duration: 0.5 });
+      animate(chartSplineLine, { pathLength: [0, 1] }, { duration: 1 });
     },
     runAnimation() {
       this.animationScript();
@@ -285,7 +285,7 @@ export const animationsData: AnimationData[] = [
       if (!svgRoot) return;
       const chartSplineLine = svgRoot.querySelector('.chart-spline__line');
       if (!chartSplineLine) return;
-      animate(chartSplineLine, { pathLength: [0, 1] }, { duration: 0.5 });
+      animate(chartSplineLine, { pathLength: [0, 1] }, { duration: 1 });
     },
     runAnimation() {
       this.animationScript();
@@ -398,7 +398,7 @@ export const animationsData: AnimationData[] = [
     animationScript: () => {
       const svgRoot = document.querySelector('#bike');
       if (!svgRoot) return;
-      animate(svgRoot, { rotate: [0, -45, -45, -45, 0] }, { duration: 1.5, ease: 'easeInOut' });
+      animate(svgRoot, { rotate: [0, -45, -45, -45, 0] }, { duration: 1, ease: 'easeInOut' });
     },
     runAnimation() {
       this.animationScript();
