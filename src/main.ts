@@ -1,15 +1,16 @@
-import './style.css';
 import { animate, stagger } from 'motion';
-
+import './style.css';
 import { animationsData } from './animations.ts';
 
+// setup animation examples
 const animationList = document.getElementById('animation-list');
 
 if (animationList) {
   animationsData.forEach(animation => {
-    const card = document.createElement('div');
-    card.className = 'animation-card';
-    card.dataset.id = animation.id;
+    const button = document.createElement('button');
+    button.className = 'animation-card';
+    button.dataset.id = animation.id;
+    button.ariaLabel = animation.title;
 
     const animationItem = document.createElement('div');
     animationItem.className =
@@ -20,19 +21,19 @@ if (animationList) {
       animation.runAnimation();
     });
 
-    card.appendChild(animationItem);
-    animationList.appendChild(card);
+    button.appendChild(animationItem);
+    animationList.appendChild(button);
   });
-}
 
-animate(
-  '.animation-item',
-  { y: [50, 0], opacity: 1 },
-  {
-    duration: 1,
-    delay: stagger(0.1),
-    type: 'spring',
-    stiffness: 100,
-    bounce: 1,
-  }
-);
+  animate(
+    '.animation-item',
+    { y: [50, 0], opacity: 1 },
+    {
+      duration: 1,
+      delay: stagger(0.1),
+      type: 'spring',
+      stiffness: 100,
+      bounce: 1,
+    }
+  );
+}
