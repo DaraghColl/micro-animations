@@ -12,6 +12,8 @@ export default [
         document: 'readonly',
         window: 'readonly',
         navigator: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLButtonElement: 'readonly',
       },
     },
   },
@@ -27,6 +29,8 @@ export default [
         document: 'readonly',
         window: 'readonly',
         navigator: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLButtonElement: 'readonly',
       },
     },
     plugins: {

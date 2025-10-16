@@ -1,6 +1,7 @@
 import { animate, stagger } from 'motion';
-import './style.css';
+import '../styles/style.css';
 import { animationsData } from './animations.ts';
+import { setupThemeToggle } from './theme-toggle.ts';
 
 // setup animation examples
 const animationList = document.getElementById('animation-list');
@@ -14,7 +15,7 @@ if (animationList) {
 
     const animationItem = document.createElement('div');
     animationItem.className =
-      'animation-item w-fit cursor-pointer rounded bg-white p-4 opacity-0 transition-shadow duration-300 hover:shadow-lg';
+      'animation-item w-fit cursor-pointer rounded bg-neutral-200/50 dark:bg-neutral-950 dark:border-neutral-900 dark:border p-4 opacity-0 transition-shadow duration-300 hover:shadow-lg';
     animationItem.innerHTML = animation.html;
 
     animationItem.addEventListener('mouseenter', () => {
@@ -37,3 +38,5 @@ if (animationList) {
     }
   );
 }
+
+setupThemeToggle(document.querySelector<HTMLButtonElement>('#app')!);
