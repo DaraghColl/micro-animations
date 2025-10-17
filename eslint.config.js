@@ -31,6 +31,7 @@ export default [
         navigator: 'readonly',
         HTMLElement: 'readonly',
         HTMLButtonElement: 'readonly',
+        setTimeout: 'readonly',
       },
     },
     plugins: {
