@@ -1,3 +1,5 @@
+import { animate } from 'motion';
+
 const moonIcon = `
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +49,7 @@ const createThemeToggleMarkup = (): string => {
     <div class="flex justify-end">
       <button
         id="dark-mode-toggle"
-        class="cursor-pointer rounded-full bg-neutral-200/50 p-3 dark:bg-neutral-950"
+        class="cursor-pointer rounded-full bg-neutral-200/50 p-3 dark:border dark:border-neutral-900 dark:bg-neutral-950"
         aria-label="Toggle dark mode"
       >
         ${moonIcon}
@@ -56,11 +58,20 @@ const createThemeToggleMarkup = (): string => {
   `;
 };
 
+const animateToggleIcon = (darkModeToggle: HTMLElement, toDarkMode: boolean) => {
+  const toIcon = toDarkMode ? moonIcon : sunIcon;
+
+  animate(darkModeToggle, { rotateY: [0, 90, 0] }, { duration: 0.3, ease: 'easeInOut' });
+  setTimeout(() => {
+    darkModeToggle.innerHTML = toIcon;
+  }, 100);
+};
+
 const toggleClassAndIcon = (htmlElement: HTMLElement, darkModeToggle: HTMLElement) => {
   if (htmlElement.classList.contains('dark')) {
-    darkModeToggle.innerHTML = sunIcon;
+    animateToggleIcon(darkModeToggle, false);
   } else {
-    darkModeToggle.innerHTML = moonIcon;
+    animateToggleIcon(darkModeToggle, true);
   }
 };
 
