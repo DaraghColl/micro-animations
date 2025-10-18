@@ -1,6 +1,6 @@
 import { animate, stagger } from 'motion';
 import '../styles/style.css';
-import { animationsData } from './animations.ts';
+import { animationsData } from './animations/index.ts';
 import { setupThemeToggle } from './theme-toggle.ts';
 
 // setup animation examples
@@ -26,6 +26,7 @@ if (animationList) {
     animationList.appendChild(button);
   });
 
+  // animate in the animation items
   animate(
     '.animation-item',
     { y: [50, 0], opacity: 1 },
