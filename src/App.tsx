@@ -28,7 +28,11 @@ function App() {
         <h1 className="mb-10 text-center text-7xl">Micro Animations</h1>
         <p className="text-lg">
           A growing list of micro animations, based on{' '}
-          <a href="https://lucide.dev/icons/" className="text-indigo-500" target="_blank">
+          <a
+            href="https://lucide.dev/icons/"
+            className="text-indigo-600 underline dark:text-indigo-400"
+            target="_blank"
+          >
             lucide icons
           </a>
         </p>
@@ -41,7 +45,7 @@ function App() {
       {/* Animations List */}
       <div className="mb-12">
         <div className="mb-8 text-center">
-          <p className="text-sm text-neutral-500">
+          <p className="darktext-neutral-400 text-sm text-neutral-500 dark:text-neutral-200">
             Hover over any icon to see the animation in action
           </p>
         </div>

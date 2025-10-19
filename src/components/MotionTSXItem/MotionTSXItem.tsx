@@ -14,7 +14,11 @@ const MotionTSXItem = ({ animation }: { animation: MotionTSXAnimation }) => {
   };
 
   return (
-    <AnimationItem handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave}>
+    <AnimationItem
+      title={animation.title}
+      handleMouseEnter={handleMouseEnter}
+      handleMouseLeave={handleMouseLeave}
+    >
       {animation.motionTSX(isHovered)}
     </AnimationItem>
   );

@@ -15,7 +15,11 @@ const MotionTSItem = ({ animation }: { animation: MotionTSAnimation }) => {
   );
 
   return (
-    <AnimationItem handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave}>
+    <AnimationItem
+      title={animation.title}
+      handleMouseEnter={handleMouseEnter}
+      handleMouseLeave={handleMouseLeave}
+    >
       <div dangerouslySetInnerHTML={{ __html: motionHtml }} />
     </AnimationItem>
   );

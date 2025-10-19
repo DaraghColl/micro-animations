@@ -31,7 +31,7 @@ const AnimationTypeTabs = (props: AnimationTypeTabsProps) => {
           {key === activeTab ? (
             <motion.div
               layoutId="indicator"
-              className="absolute top-0 left-0 h-full w-32 rounded-lg border-2 border-indigo-500"
+              className="absolute top-0 left-0 h-full w-32 rounded-sm border-2 border-indigo-600 dark:border-indigo-400"
             ></motion.div>
           ) : null}
         </button>

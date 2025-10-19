@@ -14,6 +14,7 @@ const ThemeToggle = () => {
         document.documentElement.classList.toggle('dark');
         setIsDarkMode(document.documentElement.classList.contains('dark'));
       }}
+      aria-label="toggle theme"
     >
       <motion.div>
         <AnimatePresence mode="wait">

@@ -33,7 +33,11 @@ const CSSAnimationItem = ({ animation }: { animation: CSSAnimation }) => {
   };
 
   return (
-    <AnimationItem handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave}>
+    <AnimationItem
+      title={animation.title}
+      handleMouseEnter={handleMouseEnter}
+      handleMouseLeave={handleMouseLeave}
+    >
       <div
         className={`example-trigger-element ${isHovered ? 'hover' : ''}`}
         dangerouslySetInnerHTML={{ __html: animation.html }}
