@@ -7,16 +7,16 @@ interface AnimationTypeTabsProps {
 }
 
 const tabItems: Record<AnimationVariant, string> = {
-  css: 'CSS',
   motionTS: 'Motion TS',
   motionTSX: 'Motion TSX',
+  css: 'CSS',
 };
 
 const AnimationTypeTabs = (props: AnimationTypeTabsProps) => {
   const { activeTab, setActiveTab } = props;
 
   return (
-    <div className="inline-flex rounded-lg bg-white p-1 dark:bg-neutral-900">
+    <div className="inline-flex rounded-lg bg-white p-1 dark:border dark:border-neutral-800 dark:bg-neutral-950">
       {Object.entries(tabItems).map(([key, label]) => (
         <button
           key={key}
